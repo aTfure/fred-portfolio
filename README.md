@@ -1,20 +1,26 @@
 # Fred Onyango — Portfolio
 
-A clean, fast, **static** personal portfolio.
+Static personal portfolio, **migrated from**  
+[Google Sites](https://sites.google.com/view/fredonyango-portfolio/).
 
 No frameworks. No build step. No backend.  
-Just HTML + CSS + a tiny bit of vanilla JavaScript.
+HTML + CSS + a little vanilla JavaScript.
 
 **Live:** https://atfure.github.io/fred-portfolio/
 
-## Why static?
+## What was migrated
 
-Because simpler is better.  
-(See the “Why Static Sites Are Awesome” section on the site.)
+| Google Sites page | Now on this site |
+|-------------------|------------------|
+| About / Who I am | Hero + About (AGL, Reduzer) |
+| Pitch video | `#pitch` (Drive embed) |
+| Portfolio projects | Merchandiser, CBC education, ICD data eng + engineering projects |
+| Hire Me | `#hire` + `resume.pdf` |
+| Contact Me | Email, phone, socials, Google Form embed |
+
+**Contact email:** ochieng.fredonyango@gmail.com
 
 ## Local preview
-
-Open `index.html` in any browser, or run a local server:
 
 ```bash
 npx serve .
@@ -22,29 +28,36 @@ npx serve .
 python3 -m http.server 8000
 ```
 
-## Deploy
+## Deploy (GitHub Pages)
 
-### GitHub Pages (this repo)
+Already enabled for this repo: branch `main`, folder `/ (root)`.
 
-1. Push to `main` on GitHub.
-2. Settings → Pages → Source: Deploy from a branch → `main` / `/ (root)`.
-3. Site is served at `https://atfure.github.io/fred-portfolio/`.
+Push to `main` → site updates at  
+https://atfure.github.io/fred-portfolio/
 
-Every push to `main` updates the site after Pages rebuilds.
+### Custom domain (optional)
 
-### Cloudflare Pages (optional)
+If you own a domain (e.g. `fredonyango.com`):
 
-1. Connect this GitHub repository in [Cloudflare Pages](https://pages.cloudflare.com).
-2. Build settings: leave empty (no build command).
-3. Deploy. You can point a custom domain here later.
+1. Add a `CNAME` file in this repo with the domain name.
+2. In GitHub → Settings → Pages → Custom domain, enter the same name.
+3. At your DNS host, point:
+   - **Apex:** A records to GitHub Pages IPs `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - **www:** CNAME to `atfure.github.io`
+
+You still need the **domain name** itself; an email address alone cannot be used as GitHub Pages DNS.
 
 ## Customisation
 
 | What | Where |
 |------|--------|
-| Photo | Replace `fred.jpg` |
-| Colours | CSS variables at the top of `styles.css` |
+| Photo | `fred.jpg` |
+| Resume | `resume.pdf` |
+| Colours | CSS variables in `styles.css` |
 | Content | `index.html` |
-| Favicon | `favicon.svg` |
 
-That’s it.
+## Source of truth links
+
+- Resume (Drive original): https://drive.google.com/file/d/1LIJvXnCHaPIbt1azkl50pxV0GwpKaFpy/view  
+- Pitch video: https://drive.google.com/file/d/1a8alJgBMbla3kEZjtqen4SwKdKCxjQX/view  
+- Contact form: [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSeUQqWkFvrxgrjy0MZDvTdsVZmcM9_Cwfdc_nREhpdkriddrQ/viewform)
