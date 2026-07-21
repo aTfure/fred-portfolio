@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fred Onyango — Software Engineer & Logistics Professional. Bridging maritime logistics, customs clearance, and modern software engineering." />
+  <meta name="author" content="Fred Onyango" />
+  <meta name="theme-color" content="#0b1120" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Fred Onyango — Portfolio" />
+  <meta property="og:description" content="Software engineer with deep domain expertise in customs clearance, freight forwarding, and supply chain optimisation." />
+  <meta property="og:image" content="fred.jpg" />
+  <meta property="og:locale" content="en_KE" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Fred Onyango — Portfolio" />
+  <meta name="twitter:description" content="Software engineer with deep domain expertise in customs clearance, freight forwarding, and supply chain optimisation." />
+  <meta name="twitter:image" content="fred.jpg" />
+
+  <title>Fred Onyango — Portfolio</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Navigation -->
+  <header class="header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="#" class="logo" aria-label="Fred Onyango — home">FO</a>
+      <button
+        class="nav-toggle"
+        aria-label="Toggle navigation"
+        aria-controls="navLinks"
+        aria-expanded="false"
+        id="navToggle"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero container">
+      <div class="hero-content">
+        <img
+          src="fred.jpg"
+          alt="Portrait of Fred Onyango"
+          class="hero-photo"
+          width="180"
+          height="180"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <p class="hero-eyebrow">Nairobi · Kenya</p>
+        <h1>Fred Onyango</h1>
+        <p class="hero-title">Software Engineer &amp; Logistics Professional</p>
+        <p class="hero-tagline">
+          Dual background in computerised customs, clearing &amp; forwarding, and software engineering.
+          I optimise supply chains with process expertise and clean code.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Get in touch</a>
+          <a href="#projects" class="btn btn-ghost">View projects</a>
+          <a href="https://github.com/aTfure" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section container">
+      <h2 class="section-title">About</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Logistics and software professional with a dual background in computerised customs,
+            clearing and forwarding, and software engineering.
+          </p>
+          <p>
+            In recent roles I have delivered measurable results: end-to-end customs clearance,
+            shipment process optimisation, fewer clearance delays, and lower storage penalties.
+          </p>
+          <p>
+            As a developer I have migrated platform components from Vue.js to React.js,
+            reducing development friction and improving user experience by cutting navigation errors.
+          </p>
+          <p>
+            I am looking for roles where I can drive process improvement and contribute to both
+            operational excellence and data-driven technology in logistics and supply chain.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section container">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <h3>Software QA Engineer</h3>
+            <p class="timeline-meta">AppinApp · Nairobi, Kenya</p>
+            <p>
+              Quality assurance and software development contributions.
+              Migrated platform components from Vue.js to React.js, reducing development time
+              and improving user experience.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <h3>Customs Clearance &amp; Freight Forwarding</h3>
+            <p class="timeline-meta">Logistics &amp; Maritime Operations · Kenya</p>
+            <p>
+              End-to-end customs clearance using Kenya Revenue Authority's ICMS system.
+              Risk assessment of entries, process optimisation, and reduction of clearance delays
+              and storage penalties. Domain knowledge across maritime management,
+              port operations, and international freight forwarding.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <h3>Software Engineering Training</h3>
+            <p class="timeline-meta">ALX / Holberton School pathway</p>
+            <p>
+              Intensive full-stack programme covering low-level programming (C),
+              Python, JavaScript, databases, system design, and collaborative project work.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section container">
+      <h2 class="section-title">Selected Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Import Clearance Tracking</h3>
+          <p class="project-tech">Logistics · Process tooling</p>
+          <p>
+            Domain-focused tooling for tracking import clearance workflows —
+            bridging real customs operations knowledge with software that reduces delays and penalties.
+          </p>
+          <a href="https://github.com/aTfure/Import_Clearance_Tracking" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Simple Shell</h3>
+          <p class="project-tech">C</p>
+          <p>
+            Custom Unix-like shell implementing command execution, built-ins,
+            path resolution, and process management from scratch.
+          </p>
+          <a href="https://github.com/aTfure/Simple_shell" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Airbnb Clone</h3>
+          <p class="project-tech">Python · Flask · MySQL · JavaScript</p>
+          <p>
+            Full-stack clone of the Airbnb platform: object-relational mapping,
+            RESTful API, web interface, and console for managing places, users, and reviews.
+          </p>
+          <a href="https://github.com/aTfure/AirBnB_clone_v4" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Files Manager</h3>
+          <p class="project-tech">Node.js · MongoDB · Redis · Express</p>
+          <p>
+            Backend service with authentication, file upload, pagination,
+            thumbnail generation, and background processing using Redis queues.
+          </p>
+          <a href="https://github.com/aTfure/alx-files_manager" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Languages &amp; Frameworks</h3>
+          <ul>
+            <li>JavaScript / TypeScript</li>
+            <li>React · Vue.js</li>
+            <li>Python</li>
+            <li>C</li>
+            <li>Node.js · Express</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Backend &amp; Data</h3>
+          <ul>
+            <li>MongoDB · Redis</li>
+            <li>MySQL</li>
+            <li>REST APIs</li>
+            <li>Auth &amp; background jobs</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Domain Expertise</h3>
+          <ul>
+            <li>Customs clearance (ICMS / KRA)</li>
+            <li>Maritime &amp; port operations</li>
+            <li>Freight forwarding</li>
+            <li>Supply chain optimisation</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Tools &amp; Practices</h3>
+          <ul>
+            <li>Git · GitHub Actions</li>
+            <li>Static sites &amp; CI</li>
+            <li>QA &amp; testing</li>
+            <li>Process improvement</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Writing -->
+    <section id="writing" class="section container">
+      <h2 class="section-title">Writing</h2>
+      <article class="writing-card">
+        <h3>Why Static Sites Are Awesome</h3>
+        <p class="writing-meta">A short essay on choosing simplicity over complexity</p>
+
+        <div class="writing-content">
+          <p>
+            I recently put together a tool to find cheap mini PCs. It started as a Python script
+            that pulled data from eBay, did a bunch of parsing, and printed the results to the terminal.
+            I figured, “Hey, maybe someone else would find this useful.” So why not turn it into a website?
+          </p>
+          <p>
+            My first thought: <em>Let’s use Flask!</em> Python in the back, maybe some Svelte for a reactive front-end…
+            and before I knew it, I was getting overwhelmed. Then I remembered a site I’d seen a while ago,
+            diskprices.com, that compared Amazon listings for storage. I peeked at the source code, and to my surprise,
+            it was just a single HTML page with no backend. I thought, “Wait… can I do that too?”
+          </p>
+          <p>
+            I closed all my tabs about the “best web frameworks,” shut down my computer, and stepped away.
+            I came back the next day, determined to keep things simple. Just <strong>get it done</strong>.
+          </p>
+          <p>
+            After a few rounds of “is there anything simpler?” I landed on the obvious answer:
+            a static HTML page that displays pre-fetched data. Run the Python script periodically,
+            save the data to a JSON file, and load it into a static page. Vanilla JavaScript handles sorting and filtering.
+          </p>
+          <p>
+            Hosting? Cloudflare Pages — free. Updating the data? GitHub Actions on a cron schedule — also free.
+            The next morning everything was working. The data updated every hour and it just… worked.
+          </p>
+          <p>
+            I submitted it to Hacker News and it hit the front page. 275k requests that day.
+            Cloudflare handled it without breaking a sweat. All for free.
+          </p>
+          <p class="writing-highlight">
+            That’s the beauty of static sites. They’re simple, fast, and get the job done without the headaches.
+            Sometimes, simpler is better.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section container">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-content">
+        <p class="contact-intro">
+          Interested in working together or just want to say hello?
+          I’m always open to conversations about software, logistics, or both.
+        </p>
+        <div class="contact-links">
+          <a href="tel:+254725550414" class="contact-item">
+            <span class="contact-label">Phone</span>
+            <span class="contact-value">+254 725 550 414</span>
+          </a>
+          <a href="https://github.com/aTfure" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/aTfure</span>
+          </a>
+          <a href="https://x.com/aTfure" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <span class="contact-label">X / Twitter</span>
+            <span class="contact-value">@aTfure</span>
+          </a>
+          <a href="https://ke.linkedin.com/in/fredonyango" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">fredonyango</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Built as a static site — because simpler is better.</p>
+      <p class="footer-note">© <span id="year">2026</span> Fred Onyango</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
