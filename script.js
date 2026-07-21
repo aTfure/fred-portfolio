@@ -35,12 +35,24 @@ if (yearEl) {
   yearEl.textContent = String(new Date().getFullYear());
 }
 
-// Active section highlight in nav
-const sections = document.querySelectorAll('main section[id]');
+// Active nav highlight — map page sections to Google Sites-style nav labels
 const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+const sectionToNav = {
+  about: 'about',
+  pitch: 'about',
+  experience: 'about',
+  portfolio: 'portfolio',
+  skills: 'portfolio',
+  hire: 'hire',
+  contact: 'contact',
+};
 
-if (sections.length && navAnchors.length && 'IntersectionObserver' in window) {
-  const byId = new Map(
+const observed = document.querySelectorAll(
+  '#about, #pitch, #experience, #portfolio, #skills, #hire, #contact'
+);
+
+if (observed.length && navAnchors.length && 'IntersectionObserver' in window) {
+  const byHref = new Map(
     Array.from(navAnchors).map((a) => [a.getAttribute('href').slice(1), a])
   );
 
@@ -48,17 +60,18 @@ if (sections.length && navAnchors.length && 'IntersectionObserver' in window) {
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        const id = entry.target.id;
+        const navKey = sectionToNav[entry.target.id];
+        if (!navKey) return;
         navAnchors.forEach((a) => a.classList.remove('active'));
-        const active = byId.get(id);
+        const active = byHref.get(navKey);
         if (active) active.classList.add('active');
       });
     },
     {
-      rootMargin: '-40% 0px -50% 0px',
+      rootMargin: '-35% 0px -50% 0px',
       threshold: 0,
     }
   );
 
-  sections.forEach((section) => observer.observe(section));
+  observed.forEach((section) => observer.observe(section));
 }
