@@ -6,8 +6,6 @@ function setMenuOpen(open) {
   if (!navLinks || !navToggle) return;
   navLinks.classList.toggle('open', open);
   navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  const label = navToggle.querySelector('span');
-  if (label) label.textContent = open ? 'CLOSE' : 'MENU';
 }
 
 if (navToggle && navLinks) {
@@ -34,8 +32,7 @@ if (yearEl) {
   yearEl.textContent = String(new Date().getFullYear());
 }
 
-// Active nav by section
-// Map content sections → primary nav targets
+// Active nav highlight
 const sectionMap = {
   work: 'work',
   skills: 'work',
@@ -43,12 +40,12 @@ const sectionMap = {
   about: 'experience',
   resume: 'resume',
   pitch: 'pitch',
-  writing: 'pitch',
+  writing: 'writing',
   hire: 'hire',
   contact: 'contact',
 };
 
-const anchors = document.querySelectorAll('.nav a[href^="#"]');
+const anchors = document.querySelectorAll('.nav-links a[href^="#"]');
 const sections = document.querySelectorAll(
   '#work, #skills, #experience, #resume, #pitch, #writing, #hire, #contact'
 );
@@ -62,10 +59,10 @@ if (anchors.length && sections.length && 'IntersectionObserver' in window) {
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        const navKey = sectionMap[entry.target.id];
-        if (!navKey) return;
+        const key = sectionMap[entry.target.id];
+        if (!key) return;
         anchors.forEach((a) => a.classList.remove('active'));
-        const active = byHash.get(navKey);
+        const active = byHash.get(key);
         if (active) active.classList.add('active');
       });
     },
