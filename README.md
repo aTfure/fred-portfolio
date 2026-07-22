@@ -1,10 +1,10 @@
 # Fredrick Onyango — Portfolio
 
-Clean product-style portfolio (Tihada-inspired UI). Content aligned to `resume.pdf`.
+Brutalist static one-pager. Content aligned to `resume.pdf`.
 
 **Live:** https://atfure.github.io/fred-portfolio/
 
-**Design:** white canvas, Inter, black/white hierarchy, pill nav, inverted headline highlights, skyline hero — adapted from product landing reference (`image.jpg`).
+**Design refs:** [Brutalist Websites — One Page Love](https://onepagelove.com/brutalist-websites)
 
 ## What’s on the page (hiring order)
 
