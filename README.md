@@ -1,26 +1,22 @@
-# Fred Onyango — Portfolio
+# Fredrick Onyango — Portfolio
 
-Static personal portfolio (brutalist one-pager).
-
-**Design refs:** [Brutalist Websites — One Page Love](https://onepagelove.com/brutalist-websites)  
-**Content source:** [Google Sites portfolio](https://sites.google.com/view/fredonyango-portfolio/)
-
-No frameworks. No build step. No backend.  
-HTML + CSS + a little vanilla JavaScript. No profile photo.
+Brutalist static one-pager. Content aligned to `resume.pdf`.
 
 **Live:** https://atfure.github.io/fred-portfolio/
 
-## What was migrated
+**Design refs:** [Brutalist Websites — One Page Love](https://onepagelove.com/brutalist-websites)
 
-| Google Sites page | Now on this site |
-|-------------------|------------------|
-| About / Who I am | Hero + About (AGL, Reduzer) |
-| Pitch video | `#pitch` (Drive embed) |
-| Portfolio projects | Merchandiser, CBC education, ICD data eng + engineering projects |
-| Hire Me | `#hire` + `resume.pdf` |
-| Contact Me | Email, phone, socials, Google Form embed |
+## What’s on the page (hiring order)
 
-**Contact email:** ochieng.fredonyango@gmail.com
+1. **Hero** — open to data eng  
+2. **Selected work** — flagships (ICD case study, clearance tooling, merchandiser, files manager) + collapsed ALX proof  
+3. **Experience** — dated roles + metrics from the resume  
+4. **Pitch video** — Drive embed + open link  
+5. **Writing** — Medium  
+6. **Hire me** — want / bring / strongest  
+7. **Contact** — email first, optional form  
+
+No profile photo. Resume is the same facts as the site.
 
 ## Local preview
 
@@ -30,36 +26,59 @@ npx serve .
 python3 -m http.server 8000
 ```
 
-## Deploy (GitHub Pages)
+## Deploy
 
-Already enabled for this repo: branch `main`, folder `/ (root)`.
-
-Push to `main` → site updates at  
-https://atfure.github.io/fred-portfolio/
+GitHub Pages: branch `main`, folder `/ (root)`.  
+Push to `main` → https://atfure.github.io/fred-portfolio/
 
 ### Custom domain (optional)
 
-If you own a domain (e.g. `fredonyango.com`):
+1. Buy a domain (e.g. `fredonyango.com`).
+2. Add a file `CNAME` in this repo with one line: your domain.
+3. GitHub → Settings → Pages → Custom domain → same name → enable HTTPS.
+4. At the DNS host:
+   - **Apex:** A records → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - **www:** CNAME → `atfure.github.io`
 
-1. Add a `CNAME` file in this repo with the domain name.
-2. In GitHub → Settings → Pages → Custom domain, enter the same name.
-3. At your DNS host, point:
-   - **Apex:** A records to GitHub Pages IPs `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - **www:** CNAME to `atfure.github.io`
+### Analytics (optional)
 
-You still need the **domain name** itself; an email address alone cannot be used as GitHub Pages DNS.
+No tracker ships by default (privacy-first). To add later:
 
-## Customisation
+- [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/) (beacon snippet), or  
+- [Plausible](https://plausible.io) / [GoatCounter](https://www.goatcounter.com)
 
-| What | Where |
-|------|--------|
-| Photo | `fred.jpg` |
-| Resume | `resume.pdf` |
-| Colours | CSS variables in `styles.css` |
-| Content | `index.html` |
+Add the snippet before `</body>` once you have a site ID.
 
-## Source of truth links
+### Pitch video
 
-- Resume (Drive original): https://drive.google.com/file/d/1LIJvXnCHaPIbt1azkl50pxV0GwpKaFpy/view  
+- Embed + link: Drive file `1a8alJgBMbla3kEZjtqen4SwKdKCxjQXs`
+- Sharing must be **Anyone with the link → Viewer**
+- For bulletproof playback: upload **YouTube unlisted** or commit a compressed `pitch.mp4`
+
+### Featured repos (README hygiene)
+
+For recruiters clicking GitHub links, each featured public repo should have:
+
+- One-paragraph problem statement  
+- Stack list  
+- How to run (if applicable)  
+- Optional screenshot / GIF  
+
+Priority: `Import_Clearance_Tracking`, `Merchandiser_Route-Plan`, `alx-files_manager`.
+
+## Files
+
+| File | Role |
+|------|------|
+| `index.html` | Content |
+| `styles.css` | Brutalist UI |
+| `script.js` | Nav + year |
+| `resume.pdf` | Downloadable CV (source of truth for dates/metrics) |
+| `og-image.png` / `.svg` | Social share card (1200×630) |
+| `favicon.svg` | Tab icon |
+
+## Source links
+
+- Resume Drive original: https://drive.google.com/file/d/1LIJvXnCHaPIbt1azkl50pxV0GwpKaFpy/view  
 - Pitch video: https://drive.google.com/file/d/1a8alJgBMbla3kEZjtqen4SwKdKCxjQXs/view?usp=sharing  
 - Contact form: [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSeUQqWkFvrxgrjy0MZDvTdsVZmcM9_Cwfdc_nREhpdkriddrQ/viewform)

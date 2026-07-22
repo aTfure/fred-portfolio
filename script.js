@@ -24,7 +24,7 @@ if (navToggle && navLinks) {
   });
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 820) setMenuOpen(false);
+    if (window.innerWidth > 900) setMenuOpen(false);
   });
 }
 
@@ -35,32 +35,28 @@ if (yearEl) {
 }
 
 // Active nav by section
+// Map content sections → primary nav targets
 const sectionMap = {
-  about: 'about',
-  pitch: 'about',
-  experience: 'about',
   work: 'work',
+  skills: 'work',
+  experience: 'experience',
+  about: 'experience',
+  pitch: 'pitch',
+  writing: 'pitch',
   hire: 'hire',
   contact: 'contact',
 };
 
 const anchors = document.querySelectorAll('.nav a[href^="#"]');
-const sections = document.querySelectorAll('#about, #pitch, #experience, #work, #hire, #contact');
+const sections = document.querySelectorAll(
+  '#work, #skills, #experience, #pitch, #writing, #hire, #contact'
+);
 
 if (anchors.length && sections.length && 'IntersectionObserver' in window) {
   const byHash = new Map(
     Array.from(anchors).map((a) => [a.getAttribute('href').slice(1), a])
   );
 
-  // Map nav labels: about, work, hire, contact
-  const navKeyFromHref = {
-    about: 'about',
-    work: 'work',
-    hire: 'hire',
-    contact: 'contact',
-  };
-
-  // Rebuild map using section id → nav key → anchor
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -72,9 +68,8 @@ if (anchors.length && sections.length && 'IntersectionObserver' in window) {
         if (active) active.classList.add('active');
       });
     },
-    { rootMargin: '-30% 0px -55% 0px', threshold: 0 }
+    { rootMargin: '-28% 0px -55% 0px', threshold: 0 }
   );
 
   sections.forEach((s) => observer.observe(s));
-  void navKeyFromHref;
 }
