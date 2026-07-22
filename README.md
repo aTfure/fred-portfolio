@@ -1,10 +1,12 @@
 # Fred Onyango — Portfolio
 
-Static personal portfolio, **migrated from**  
-[Google Sites](https://sites.google.com/view/fredonyango-portfolio/).
+Static personal portfolio (brutalist one-pager).
+
+**Design refs:** [Brutalist Websites — One Page Love](https://onepagelove.com/brutalist-websites)  
+**Content source:** [Google Sites portfolio](https://sites.google.com/view/fredonyango-portfolio/)
 
 No frameworks. No build step. No backend.  
-HTML + CSS + a little vanilla JavaScript.
+HTML + CSS + a little vanilla JavaScript. No profile photo.
 
 **Live:** https://atfure.github.io/fred-portfolio/
 

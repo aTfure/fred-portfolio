@@ -1,4 +1,4 @@
-// Mobile navigation toggle
+// Mobile nav
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 
@@ -6,6 +6,8 @@ function setMenuOpen(open) {
   if (!navLinks || !navToggle) return;
   navLinks.classList.toggle('open', open);
   navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  const label = navToggle.querySelector('span');
+  if (label) label.textContent = open ? 'CLOSE' : 'MENU';
 }
 
 if (navToggle && navLinks) {
@@ -13,19 +15,16 @@ if (navToggle && navLinks) {
     setMenuOpen(!navLinks.classList.contains('open'));
   });
 
-  // Close menu when a link is clicked
   navLinks.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => setMenuOpen(false));
   });
 
-  // Close on Escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') setMenuOpen(false);
   });
 
-  // Close if viewport grows past mobile
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) setMenuOpen(false);
+    if (window.innerWidth > 820) setMenuOpen(false);
   });
 }
 
@@ -35,43 +34,47 @@ if (yearEl) {
   yearEl.textContent = String(new Date().getFullYear());
 }
 
-// Active nav highlight — map page sections to Google Sites-style nav labels
-const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
-const sectionToNav = {
+// Active nav by section
+const sectionMap = {
   about: 'about',
   pitch: 'about',
   experience: 'about',
-  portfolio: 'portfolio',
-  skills: 'portfolio',
+  work: 'work',
   hire: 'hire',
   contact: 'contact',
 };
 
-const observed = document.querySelectorAll(
-  '#about, #pitch, #experience, #portfolio, #skills, #hire, #contact'
-);
+const anchors = document.querySelectorAll('.nav a[href^="#"]');
+const sections = document.querySelectorAll('#about, #pitch, #experience, #work, #hire, #contact');
 
-if (observed.length && navAnchors.length && 'IntersectionObserver' in window) {
-  const byHref = new Map(
-    Array.from(navAnchors).map((a) => [a.getAttribute('href').slice(1), a])
+if (anchors.length && sections.length && 'IntersectionObserver' in window) {
+  const byHash = new Map(
+    Array.from(anchors).map((a) => [a.getAttribute('href').slice(1), a])
   );
 
+  // Map nav labels: about, work, hire, contact
+  const navKeyFromHref = {
+    about: 'about',
+    work: 'work',
+    hire: 'hire',
+    contact: 'contact',
+  };
+
+  // Rebuild map using section id → nav key → anchor
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        const navKey = sectionToNav[entry.target.id];
+        const navKey = sectionMap[entry.target.id];
         if (!navKey) return;
-        navAnchors.forEach((a) => a.classList.remove('active'));
-        const active = byHref.get(navKey);
+        anchors.forEach((a) => a.classList.remove('active'));
+        const active = byHash.get(navKey);
         if (active) active.classList.add('active');
       });
     },
-    {
-      rootMargin: '-35% 0px -50% 0px',
-      threshold: 0,
-    }
+    { rootMargin: '-30% 0px -55% 0px', threshold: 0 }
   );
 
-  observed.forEach((section) => observer.observe(section));
+  sections.forEach((s) => observer.observe(s));
+  void navKeyFromHref;
 }
