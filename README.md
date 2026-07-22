@@ -61,5 +61,5 @@ You still need the **domain name** itself; an email address alone cannot be used
 ## Source of truth links
 
 - Resume (Drive original): https://drive.google.com/file/d/1LIJvXnCHaPIbt1azkl50pxV0GwpKaFpy/view  
-- Pitch video: https://drive.google.com/file/d/1a8alJgBMbla3kEZjtqen4SwKdKCxjQX/view  
+- Pitch video: https://drive.google.com/file/d/1a8alJgBMbla3kEZjtqen4SwKdKCxjQXs/view?usp=sharing  
 - Contact form: [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSeUQqWkFvrxgrjy0MZDvTdsVZmcM9_Cwfdc_nREhpdkriddrQ/viewform)
