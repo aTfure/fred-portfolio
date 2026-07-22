@@ -10,21 +10,17 @@
 }
 
 :root {
-  /*
-    Typography palette — "Paper on asphalt"
-    Warm off-white body (easier than pure white), amber accent for hierarchy,
-    soft coral for secondary punch. Better long-read contrast than neon lime.
-  */
-  --bg: #0b0b0c;
-  --bg-2: #121214;
-  --fg: #e8e4d9;           /* body / default type */
-  --heading: #faf6ee;      /* display type */
-  --muted: #9c968b;        /* secondary labels — WCAG-friendlier */
-  --line: #e8e4d9;
-  --accent: #e8b84a;       /* amber — metrics, links, focus */
-  --accent-2: #e85d4c;     /* coral — shadows, live tags hover */
-  --link: #e8b84a;
-  --panel: #17171a;
+  /* Original brutalist palette (lime + signal red) */
+  --bg: #0a0a0a;
+  --bg-2: #111111;
+  --fg: #f2f2f0;
+  --heading: #f2f2f0;
+  --muted: #8a8a86;
+  --line: #f2f2f0;
+  --accent: #e8ff47;
+  --accent-2: #ff3b1f;
+  --link: #e8ff47;
+  --panel: #161616;
   --mono: "IBM Plex Mono", ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
   --display: "Archivo Black", "Arial Black", Impact, sans-serif;
   --pad: clamp(1rem, 3vw, 2rem);
@@ -60,8 +56,8 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #0b0b0c;
-  background: var(--accent);
+  color: var(--fg);
+  background: var(--accent-2);
 }
 
 :focus { outline: none; }
@@ -411,7 +407,7 @@ a:hover {
 }
 
 .block.hire .block-head h2 {
-  color: #0b0b0c;
+  color: #000;
 }
 
 .idx {
