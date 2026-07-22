@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Fredrick Onyango — Logistics &amp; software professional. Customs clearance, supply chain, backend development. Open to data engineering roles in Nairobi / remote." />
   <meta name="author" content="Fredrick Onyango" />
-  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="theme-color" content="#0b0b0c" />
   <link rel="canonical" href="https://atfure.github.io/fred-portfolio/" />
 
   <meta property="og:type" content="website" />
@@ -37,9 +37,10 @@
     <nav class="nav" aria-label="Primary" id="navLinks">
       <a href="#work">01 WORK</a>
       <a href="#experience">02 EXPERIENCE</a>
-      <a href="#pitch">03 PITCH</a>
-      <a href="#hire">04 HIRE</a>
-      <a href="#contact">05 CONTACT</a>
+      <a href="#resume">03 RESUME</a>
+      <a href="#pitch">04 PITCH</a>
+      <a href="#hire">05 HIRE</a>
+      <a href="#contact">06 CONTACT</a>
     </nav>
     <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu" aria-controls="navLinks" aria-expanded="false">
       <span>MENU</span>
@@ -71,7 +72,7 @@
       </p>
       <div class="hero-actions">
         <a class="btn btn-fill" href="#work">VIEW_FLAGSHIP_WORK →</a>
-        <a class="btn btn-ghost" href="resume.pdf" download>RESUME.PDF</a>
+        <a class="btn btn-ghost" href="#resume">VIEW_RESUME</a>
         <a class="btn btn-ghost" href="mailto:ochieng.fredonyango@gmail.com?subject=Hello%20Fred%20—%20from%20your%20portfolio">EMAIL_ME</a>
       </div>
       <div class="hero-grid-meta">
@@ -381,34 +382,68 @@
       </div>
     </section>
 
-    <!-- 03 PITCH VIDEO -->
-    <section class="block alt" id="pitch">
+    <!-- RESUME — view in page + open tab -->
+    <section class="block alt" id="resume">
       <header class="block-head">
-        <h2><span class="idx">03</span> PITCH_VIDEO</h2>
-        <p class="block-note">AFTER PROOF · INTRO</p>
+        <h2><span class="idx">03</span> RESUME</h2>
+        <p class="block-note">VIEW IN PAGE · NO FORCED DOWNLOAD</p>
       </header>
       <p class="section-intro">
-        Short intro. Prefer the open link if the embed is blocked by your browser or Drive permissions.
+        Read the CV below without downloading. Prefer a full window? Open it in a new tab.
       </p>
-      <div class="video-frame">
+      <div class="resume-toolbar">
+        <a class="btn btn-fill" href="resume.pdf" target="_blank" rel="noopener noreferrer">
+          OPEN_IN_NEW_TAB →
+        </a>
+        <a class="btn btn-ghost" href="resume.pdf" download>
+          DOWNLOAD.PDF
+        </a>
+      </div>
+      <div class="resume-frame">
         <iframe
-          id="pitchFrame"
-          src="https://drive.google.com/file/d/1a8alJgBMbla3kEZjtqen4SwKdKCxjQXs/preview"
-          title="Fred Onyango pitch video"
-          allow="autoplay; encrypted-media; fullscreen"
-          allowfullscreen
+          src="resume.pdf#view=FitH"
+          title="Fredrick Onyango resume PDF"
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-      <div class="video-fallback-bar">
-        <a class="btn btn-fill" href="https://drive.google.com/file/d/1a8alJgBMbla3kEZjtqen4SwKdKCxjQXs/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-          OPEN_ON_DRIVE →
-        </a>
-        <p class="video-hint">
-          Drive file must be <strong>Anyone with the link → Viewer</strong> for the embed to work for guests.
-          For rock-solid playback later: YouTube unlisted or self-hosted MP4.
-        </p>
+      <p class="resume-fallback">
+        PDF not showing?
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Open resume in a new tab</a>
+        or
+        <a href="resume.pdf" download>download the file</a>.
+      </p>
+    </section>
+
+    <!-- 04 PITCH VIDEO — compact -->
+    <section class="block" id="pitch">
+      <header class="block-head">
+        <h2><span class="idx">04</span> PITCH_VIDEO</h2>
+        <p class="block-note">COMPACT · AFTER PROOF</p>
+      </header>
+      <p class="section-intro">
+        Short intro — kept small so work and resume stay primary.
+      </p>
+      <div class="video-compact">
+        <div class="video-frame">
+          <iframe
+            id="pitchFrame"
+            src="https://drive.google.com/file/d/1a8alJgBMbla3kEZjtqen4SwKdKCxjQXs/preview"
+            title="Fred Onyango pitch video"
+            allow="autoplay; encrypted-media; fullscreen"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="video-fallback-bar">
+          <a class="btn btn-ghost" href="https://drive.google.com/file/d/1a8alJgBMbla3kEZjtqen4SwKdKCxjQXs/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            OPEN_ON_DRIVE →
+          </a>
+          <p class="video-hint">
+            If the embed is blocked, use the Drive link.
+            Share setting: <strong>Anyone with the link → Viewer</strong>.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -440,10 +475,10 @@
       </div>
     </section>
 
-    <!-- 04 HIRE -->
+    <!-- 05 HIRE -->
     <section class="block hire" id="hire">
       <header class="block-head">
-        <h2><span class="idx">04</span> HIRE_ME</h2>
+        <h2><span class="idx">05</span> HIRE_ME</h2>
         <p class="block-note">STATUS · AVAILABLE</p>
       </header>
       <div class="hire-box">
@@ -468,17 +503,17 @@
         </div>
 
         <div class="hero-actions">
-          <a class="btn btn-fill" href="resume.pdf" download>DOWNLOAD_RESUME.PDF</a>
+          <a class="btn btn-fill" href="#resume">VIEW_RESUME</a>
+          <a class="btn btn-ghost" href="resume.pdf" target="_blank" rel="noopener noreferrer">OPEN_RESUME_TAB →</a>
           <a class="btn btn-ghost" href="mailto:ochieng.fredonyango@gmail.com?subject=Role%20conversation%20—%20Fred%20Onyango">EMAIL_ME</a>
-          <a class="btn btn-ghost" href="#work">SEE_WORK</a>
         </div>
       </div>
     </section>
 
-    <!-- 05 CONTACT -->
+    <!-- 06 CONTACT -->
     <section class="block alt" id="contact">
       <header class="block-head">
-        <h2><span class="idx">05</span> REACH_OUT</h2>
+        <h2><span class="idx">06</span> REACH_OUT</h2>
         <p class="block-note">EMAIL FIRST · FORM OPTIONAL</p>
       </header>
 
@@ -540,7 +575,9 @@
     <div class="footer-row mono">
       <a href="mailto:ochieng.fredonyango@gmail.com">ochieng.fredonyango@gmail.com</a>
       <span class="sep">·</span>
-      <a href="resume.pdf" download>RESUME.PDF</a>
+      <a href="#resume">RESUME</a>
+      <span class="sep">·</span>
+      <a href="resume.pdf" target="_blank" rel="noopener noreferrer">OPEN_PDF</a>
       <span class="sep">·</span>
       <a href="#top">↑ TOP</a>
     </div>

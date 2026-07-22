@@ -41,6 +41,7 @@ const sectionMap = {
   skills: 'work',
   experience: 'experience',
   about: 'experience',
+  resume: 'resume',
   pitch: 'pitch',
   writing: 'pitch',
   hire: 'hire',
@@ -49,7 +50,7 @@ const sectionMap = {
 
 const anchors = document.querySelectorAll('.nav a[href^="#"]');
 const sections = document.querySelectorAll(
-  '#work, #skills, #experience, #pitch, #writing, #hire, #contact'
+  '#work, #skills, #experience, #resume, #pitch, #writing, #hire, #contact'
 );
 
 if (anchors.length && sections.length && 'IntersectionObserver' in window) {
