@@ -49,8 +49,8 @@
 
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
-      <span>DATA PIPELINES × CUSTOMS × SQL × PYTHON × ICMS × ICD × CLEARANCE × ETL × SUPPLY CHAIN × BACKEND × NAIROBI × </span>
-      <span>DATA PIPELINES × CUSTOMS × SQL × PYTHON × ICMS × ICD × CLEARANCE × ETL × SUPPLY CHAIN × BACKEND × NAIROBI × </span>
+      <span>DATA PIPELINES × CUSTOMS × CLOUDFLARE WORKERS × D1 × M-PESA FINTECH × SQL × PYTHON × PUPPETEER × OCR × NUXT 4 × ICMS × ICD × AIRFLOW × ETL × BACKEND × NAIROBI × </span>
+      <span>DATA PIPELINES × CUSTOMS × CLOUDFLARE WORKERS × D1 × M-PESA FINTECH × SQL × PYTHON × PUPPETEER × OCR × NUXT 4 × ICMS × ICD × AIRFLOW × ETL × BACKEND × NAIROBI × </span>
     </div>
   </div>
 
@@ -93,76 +93,134 @@
         Proof over fluff. Domain problems first — then systems work that shows I can ship software.
       </p>
 
-      <!-- FLAGSHIP 1: Data eng ICD case study -->
+      <!-- FLAGSHIP 1: Import Clearance Tracking -->
       <article class="flagship" id="case-icd">
         <div class="flag-head">
           <span class="flag-id">F01</span>
-          <span class="flag-badge">DATA ENGINEERING · CASE STUDY</span>
+          <span class="flag-badge">DATA ENGINEERING · LIVE PRODUCTION</span>
         </div>
-        <h3 class="flag-title">ICD CLEARANCE — EXCEL → PIPELINE</h3>
+        <h3 class="flag-title">IMPORT CLEARANCE TRACKING &amp; AUTOMATED REPORTING PIPELINE</h3>
         <p class="flag-result">
-          Daily inbound container updates at Inland Container Depot → client clearance.
-          Today that lives in spreadsheets. Target: a reliable, repeatable data pipeline.
+          Live automated reporting pipeline at ICD Nairobi &amp; AGL. Ingests 1,200+ container shipments across multi-tab Excel workbooks &amp; companion railage lists — cutting delays and demurrage.
         </p>
         <div class="case-grid">
           <div class="case-cell">
             <h4>// PROBLEM</h4>
             <p>
-              Manual daily updates for incoming containers and clearance status.
-              Error-prone Excel workflows, slow handoffs, hard to audit history.
+              Manual daily status updates for incoming container shipments.
+              Error-prone spreadsheets, slow handoffs, and hidden demurrage penalties.
             </p>
           </div>
           <div class="case-cell">
-            <h4>// DOMAIN CONTEXT</h4>
+            <h4>// DATA INGESTION</h4>
             <p>
-              Lived ops at <strong>KPA ICD Nairobi</strong> and now freight/clearance at <strong>AGL</strong>
-              (ICMS, KWATOS, SPOT, KEBS). I know the data because I produce it.
+              Parses 1,200+ cargo manifest rows across Dec 2025–Jul 2026 tabs + companion railage lists (discharge/docs/railage).
             </p>
           </div>
           <div class="case-cell">
-            <h4>// APPROACH</h4>
+            <h4>// ARCHITECTURE &amp; FRESHNESS</h4>
             <p>
-              Ingest daily container events → clean/validate → store → report/alerts.
-              Prefer boring reliability: Python, SQL, scheduled jobs, clear schemas.
+              Shift-window freshness alerts (50% warn / 20% block print), live yard dwell calculations, pre-ICDE queue tracking, and print-ready executive summaries.
             </p>
           </div>
           <div class="case-cell">
-            <h4>// TARGET STACK</h4>
+            <h4>// STACK &amp; METRICS</h4>
             <p>
-              Python · SQL (Postgres/MySQL) · cron / GitHub Actions · optional Airflow ·
-              CSV/API sources · dashboards for ops KPIs.
+              Python (pandas/openpyxl) · Jinja2 · GitHub Actions EAT cron · Cloudflare Pages ·
+              <strong>−35% clearance delays</strong> · <strong>−20% storage penalties</strong> · <strong>99% KPI accuracy</strong>.
             </p>
           </div>
         </div>
         <div class="flag-links">
-          <a class="btn btn-ghost" href="https://drive.google.com/file/d/1U1dMrpxfUuYgo9dlEcVXIBTyKav4W25j/view?usp=sharing" target="_blank" rel="noopener noreferrer">PROJECT_NOTES →</a>
+          <a class="btn btn-fill" href="https://import-clearance-tracking.pages.dev/" target="_blank" rel="noopener noreferrer">LIVE_PRODUCTION_DEMO →</a>
+          <a class="btn btn-ghost" href="https://github.com/aTfure/Import_Clearance_Tracking" target="_blank" rel="noopener noreferrer">GITHUB →</a>
           <a class="btn btn-ghost" href="#experience">SEE_ICD_EXPERIENCE →</a>
         </div>
       </article>
 
-      <!-- FLAGSHIP 2 -->
+      <!-- FLAGSHIP 2: KOMOL Family Chama -->
       <article class="flagship">
         <div class="flag-head">
           <span class="flag-id">F02</span>
-          <span class="flag-badge">DOMAIN TOOLING</span>
+          <span class="flag-badge">FINTECH · SERVERLESS · CLOUDFLARE WORKERS + D1</span>
         </div>
-        <h3 class="flag-title">IMPORT CLEARANCE TRACKING</h3>
+        <h3 class="flag-title">KOMOL FAMILY CHAMA — FINTECH &amp; FINANCIAL SYSTEMS</h3>
         <p class="flag-result">
-          Software shaped by real clearance workflows — track stages, reduce delays and storage penalties.
+          Production digital financial platform for a 200-member community savings group in Kenya. M-Pesa SMS credit parsing, atomic payment splits, and signed-balance arrears tracking.
         </p>
-        <p class="flag-body">
-          Bridges ICMS/customs process knowledge with tooling ops teams can actually use.
-          Fits the same problem space as AGL day-to-day work.
-        </p>
+        <div class="case-grid">
+          <div class="case-cell">
+            <h4>// PROBLEM &amp; GOAL</h4>
+            <p>
+              Manual ledger tracking for 200+ members and M-Pesa cash collection. Needed a zero-data-loss, mobile-first public dashboard and audit system.
+            </p>
+          </div>
+          <div class="case-cell">
+            <h4>// MPESA PARSER &amp; ALIASES</h4>
+            <p>
+              Single &amp; bulk SMS regex parser with phone normalization, masked-phone alias resolution, and <code>txn_id</code> idempotency guards.
+            </p>
+          </div>
+          <div class="case-cell">
+            <h4>// FINTECH ENGINE</h4>
+            <p>
+              Atomic multi-member payment splits, signed-balance arrears model (<code>balance = actual - expected</code>), advance months calculation, and isolated Event/Burial funds.
+            </p>
+          </div>
+          <div class="case-cell">
+            <h4>// STACK &amp; OPS</h4>
+            <p>
+              Cloudflare Workers · Cloudflare D1 (SQLite) · Vanilla JS · Cookie Auth · Dual Collector/Admin workspaces (`chris`/`abros`) · CSV member import.
+            </p>
+          </div>
+        </div>
         <div class="flag-links">
-          <a class="btn btn-ghost" href="https://github.com/aTfure/Import_Clearance_Tracking" target="_blank" rel="noopener noreferrer">GITHUB →</a>
+          <a class="btn btn-fill" href="https://family-chama-worker.komol-family.workers.dev" target="_blank" rel="noopener noreferrer">LIVE_SYSTEM_DEMO →</a>
         </div>
       </article>
 
-      <!-- FLAGSHIP 3 -->
+      <!-- FLAGSHIP 3: Nairobi Restaurant Data Pipeline -->
       <article class="flagship">
         <div class="flag-head">
           <span class="flag-id">F03</span>
+          <span class="flag-badge">DATA ENGINEERING · SCRAPING ARCHITECTURE · ML &amp; OCR</span>
+        </div>
+        <h3 class="flag-title">NAIROBI RESTAURANT DATA PIPELINE &amp; TELEMETRY</h3>
+        <p class="flag-result">
+          Zero-budget (KES 0.00/mo operating cost) automated 5-layer ETL pipeline mapping, scraping, OCR-parsing, and serving venue metadata and menus across Nairobi.
+        </p>
+        <div class="case-grid">
+          <div class="case-cell">
+            <h4>// DISCOVERY &amp; ACQUISITION</h4>
+            <p>
+              OSM Overpass API bounding box queries (Westlands, Kilimani, CBD, Karen, Gigiri) + Puppeteer Stealth scrapers with DuckDuckGo/Glovo multi-backend search fallbacks.
+            </p>
+          </div>
+          <div class="case-cell">
+            <h4>// SCRAPER GUARDRAILS</h4>
+            <p>
+              7 active guardrails: Cloudflare stealth evasion, DOM sibling pairing, location coordinate verification, lodging directory filters, and output concurrency isolation.
+            </p>
+          </div>
+          <div class="case-cell">
+            <h4>// PROCESSING &amp; OCR</h4>
+            <p>
+              Local Tesseract OCR menu extraction, automatic dish categorization (Starters, Mains, Drinks, Desserts), and PostgreSQL relational schema storage.
+            </p>
+          </div>
+          <div class="case-cell">
+            <h4>// TELEMETRY &amp; SERVING</h4>
+            <p>
+              Nuxt 4 SSR web application on port 3000 + Docker 3-tier architecture (Airflow scheduler, Postgres, Nuxt) · <strong>478 venues discovered</strong> · <strong>258 dishes categorized</strong>.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- FLAGSHIP 4: Merchandiser -->
+      <article class="flagship">
+        <div class="flag-head">
+          <span class="flag-id">F04</span>
           <span class="flag-badge">PRODUCT · FIELD OPS</span>
         </div>
         <h3 class="flag-title">MERCHANDISER MANAGEMENT SYSTEM</h3>
@@ -178,10 +236,10 @@
         </div>
       </article>
 
-      <!-- FLAGSHIP 4 -->
+      <!-- FLAGSHIP 5: Files Manager -->
       <article class="flagship">
         <div class="flag-head">
-          <span class="flag-id">F04</span>
+          <span class="flag-id">F05</span>
           <span class="flag-badge">BACKEND · SYSTEMS</span>
         </div>
         <h3 class="flag-title">FILES MANAGER</h3>
@@ -249,35 +307,36 @@
               <li>ICMS · KEBS compliance</li>
               <li>KWATOS · SPOT · CIYOS</li>
               <li>ICD / port ops</li>
-              <li>Freight forwarding</li>
-              <li>Warehouse &amp; inventory</li>
+              <li>M-Pesa FinTech &amp; Chama</li>
+              <li>Freight forwarding &amp; ops</li>
             </ul>
           </div>
           <div class="skill-group">
-            <h4>DATA</h4>
+            <h4>DATA &amp; ETL</h4>
             <ul>
-              <li>SQL · MySQL · PostgreSQL</li>
-              <li>Operational reporting</li>
-              <li>Excel → pipeline thinking</li>
-              <li>KPI accuracy &amp; audits</li>
+              <li>SQL · Postgres · D1 SQLite</li>
+              <li>Puppeteer Stealth Scraping</li>
+              <li>Tesseract OCR &amp; Vision</li>
+              <li>Apache Airflow pipelines</li>
+              <li>Shift-window freshness &amp; audit</li>
             </ul>
           </div>
           <div class="skill-group">
-            <h4>BACKEND</h4>
+            <h4>BACKEND &amp; CLOUD</h4>
             <ul>
-              <li>Python · C</li>
-              <li>Node · Express</li>
-              <li>REST APIs</li>
-              <li>Redis jobs · MongoDB</li>
-              <li>Git · Docker · Linux · Nginx</li>
+              <li>Python · Node.js · C</li>
+              <li>Cloudflare Workers · Pages</li>
+              <li>REST APIs · Express</li>
+              <li>Redis · MongoDB · Docker</li>
+              <li>Git · GitHub Actions CI/CD</li>
             </ul>
           </div>
           <div class="skill-group">
             <h4>FRONTEND</h4>
             <ul>
               <li>JavaScript · TypeScript</li>
-              <li>React · Vue</li>
-              <li>Ant Design</li>
+              <li>Nuxt 4 (SSR) · React · Vue</li>
+              <li>Ant Design · Vanilla CSS</li>
               <li>UX / QA instincts</li>
             </ul>
           </div>
