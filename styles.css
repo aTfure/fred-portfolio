@@ -432,8 +432,12 @@ a:hover {
 
 .about-short {
   color: var(--fg);
-  border-left: 4px solid var(--accent);
-  padding-left: 1rem;
+  border-left: 0;
+  padding-left: 0;
+  border-top: 3px solid var(--accent);
+  padding-top: 1rem;
+  border-bottom: 2px solid #2a2a2a;
+  padding-bottom: 1rem;
 }
 
 /* ========== FLAGSHIPS ========== */
